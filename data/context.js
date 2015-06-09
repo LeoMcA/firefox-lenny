@@ -1,7 +1,8 @@
 self.on('click', function (node) {
   console.error('( ͡° ͜ʖ ͡°)')
   if (node.hasAttribute('contentEditable')) {
-    node.insertAdjacentHTML('beforeend', '( ͡° ͜ʖ ͡°)')
+    if (node.classList.contains('composer_rich_textarea')) // telegram
+      node.insertAdjacentHTML('beforeend', '( ͡° ͜ʖ ͡°)')
   } else {
     insertText(node, '( ͡° ͜ʖ ͡°)')
   }
