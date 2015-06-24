@@ -1,10 +1,10 @@
-self.on('click', function (node) {
-  console.error('( ͡° ͜ʖ ͡°)')
+self.on('click', function (node, lenny) {
+  console.error(lenny)
   if (node.hasAttribute('contentEditable')) {
     if (node.classList.contains('composer_rich_textarea')) // telegram
-      node.insertAdjacentHTML('beforeend', '( ͡° ͜ʖ ͡°)')
+      node.insertAdjacentHTML('beforeend', lenny)
   } else {
-    insertText(node, '( ͡° ͜ʖ ͡°)')
+    insertText(node, lenny)
   }
 })
 
