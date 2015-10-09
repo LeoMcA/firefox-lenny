@@ -1,8 +1,10 @@
+/* global self */
+
 self.on('click', function (node, lenny) {
-  console.error(lenny)
   if (node.hasAttribute('contentEditable')) {
-    if (node.classList.contains('composer_rich_textarea')) // telegram
+    if (node.classList.contains('composer_rich_textarea')) { // telegram
       node.insertAdjacentHTML('beforeend', lenny)
+    }
   } else {
     insertText(node, lenny)
   }
@@ -19,6 +21,6 @@ function insertText (element, snippet) {
   element.value = beforeText + snippet + afterText
   element.focus()
 
-  //put the cursor after the inserted text
+  // put the cursor after the inserted text
   element.setSelectionRange(selectionEnd, selectionEnd)
 }
