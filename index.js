@@ -1,6 +1,6 @@
 var cm = require('sdk/context-menu')
 
-var lennies = ['( ͡° ͜ʖ ͡°)', '¯\\_(ツ)_/¯']
+var lennies = ['( ͡° ͜ʖ ͡°)', '¯\\_(ツ)_/¯', 'ಠ_ಠ']
 
 var items = []
 lennies.forEach(function (lenny) {
